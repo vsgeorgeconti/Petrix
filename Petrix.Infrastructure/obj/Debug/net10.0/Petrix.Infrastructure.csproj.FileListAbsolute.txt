@@ -9,10 +9,10 @@ C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastr
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.AssemblyInfo.cs
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.sourcelink.json
-C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.I.314A69DE.Up2Date
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.dll
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\refint\Petrix.Infrastructure.dll
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.pdb
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\ref\Petrix.Infrastructure.dll
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\bin\Debug\net10.0\Petrix.Infrastructure.runtimeconfig.json
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.genruntimeconfig.cache
+C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.I.314A69DE.Up2Date

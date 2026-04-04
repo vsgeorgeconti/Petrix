@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rjQeokpvnpY=",
+  "dgSpecHash": "l8S56KuAIlU=",
   "success": true,
   "projectFilePath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.5\\microsoft.extensions.dependencyinjection.10.0.5.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.5\\microsoft.extensions.dependencyinjection.abstractions.10.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
