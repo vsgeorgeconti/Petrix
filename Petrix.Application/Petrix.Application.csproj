@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Petrix.Domain\Petrix.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

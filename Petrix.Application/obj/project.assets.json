@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Petrix.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Petrix.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Petrix.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Petrix.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Petrix.Domain/Petrix.Domain.csproj",
+      "msbuildProject": "../Petrix.Domain/Petrix.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Petrix.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Lucas\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
+              "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

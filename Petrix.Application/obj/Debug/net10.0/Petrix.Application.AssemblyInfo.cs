@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Petrix.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+341c0e86fba9608fb693090fc3dce09ac29b24b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1875dc00ef938c19df5624edc6328e9414b64f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Petrix.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Petrix.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
