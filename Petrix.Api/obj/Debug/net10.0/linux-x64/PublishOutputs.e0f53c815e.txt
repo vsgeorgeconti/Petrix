@@ -1,0 +1,9 @@
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Petrix.Api
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\appsettings.Development.json
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\appsettings.json
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Petrix.Api.dll
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Petrix.Api.deps.json
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Petrix.Api.runtimeconfig.json
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Petrix.Api.pdb
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Microsoft.AspNetCore.OpenApi.dll
+c:\Estudos\Petrix\Petrix\Petrix.Api\bin\Debug\net10.0\linux-x64\publish\Microsoft.OpenApi.dll

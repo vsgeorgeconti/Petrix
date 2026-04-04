@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Petrix.Api/Petrix.Api.csproj" />
+  <Project Path="Petrix.Application/Petrix.Application.csproj" />
+  <Project Path="Petrix.Domain/Petrix.Domain.csproj" />
+  <Project Path="Petrix.Infrastructure/Petrix.Infrastructure.csproj" />
+  <Project Path="Petrix.Shared/Petrix.Shared.csproj" />
+</Solution>
