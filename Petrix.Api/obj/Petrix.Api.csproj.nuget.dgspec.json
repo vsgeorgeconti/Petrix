@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj": {}
+    "c:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj": {}
   },
   "projects": {
-    "C:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj": {
+    "c:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj",
+        "projectUniqueName": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj",
         "projectName": "Petrix.Api",
-        "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj",
+        "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\Petrix.Api.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\obj\\",
+        "outputPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
-                "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj"
+              "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
+                "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj"
               },
               "C:\\Estudos\\Petrix\\Petrix\\Petrix.Infrastructure\\Petrix.Infrastructure.csproj": {
                 "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Infrastructure\\Petrix.Infrastructure.csproj"
@@ -505,14 +505,14 @@
         }
       }
     },
-    "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
+    "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj",
+        "projectUniqueName": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj",
         "projectName": "Petrix.Application",
-        "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj",
+        "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\obj\\",
+        "outputPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -533,8 +533,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
-                "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj"
+              "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
+                "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj"
               }
             }
           }
@@ -559,7 +559,15 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
               "version": "[10.0.5, )"
             }
@@ -858,14 +866,14 @@
         }
       }
     },
-    "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
+    "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj",
+        "projectUniqueName": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj",
         "projectName": "Petrix.Domain",
-        "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj",
+        "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\obj\\",
+        "outputPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1225,11 +1233,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
-                "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj"
+              "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj": {
+                "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Application\\Petrix.Application.csproj"
               },
-              "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
-                "projectPath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj"
+              "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj": {
+                "projectPath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Domain\\Petrix.Domain.csproj"
               }
             }
           }
@@ -1250,6 +1258,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.5, )"
@@ -1263,6 +1275,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.17.0, )"
             }
           },
           "imports": [

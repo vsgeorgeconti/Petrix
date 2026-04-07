@@ -16,3 +16,5 @@ C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\ref\Petrix.Infr
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\bin\Debug\net10.0\Petrix.Infrastructure.runtimeconfig.json
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.Infrastructure.genruntimeconfig.cache
 C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\obj\Debug\net10.0\Petrix.I.314A69DE.Up2Date
+C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\bin\Debug\net10.0\Petrix.Application.dll
+C:\Estudos\Petrix\Petrix\Petrix.Infrastructure\bin\Debug\net10.0\Petrix.Application.pdb

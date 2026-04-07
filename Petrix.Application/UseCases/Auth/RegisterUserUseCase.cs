@@ -19,24 +19,24 @@ namespace Petrix.Application.UseCases.Auth
         {
 
             if (string.IsNullOrWhiteSpace(request.Name))
-                return new ApiResponse<RegisterResponse>(false, null, "Favor preencher o nome do usuario.");
+                return new ApiResponse<RegisterResponse>(false, "NAME_NOT_FOUND", null, "Favor preencher o nome do usuario.");
 
             if (string.IsNullOrWhiteSpace(request.Email))
-                return new ApiResponse<RegisterResponse>(false, null, "Favor preencher o email do usuario.");
+                return new ApiResponse<RegisterResponse>(false, "EMAIL_NOT_FOUND", null, "Favor preencher o email do usuario.");
 
             if (string.IsNullOrWhiteSpace(request.Password))
-                return new ApiResponse<RegisterResponse>(false, null, "Favor preencher a senha do usuario.");
+                return new ApiResponse<RegisterResponse>(false, "PASSWORD_NOT_FOUND", null, "Favor preencher a senha do usuario.");
 
             if (string.IsNullOrWhiteSpace(request.ConfirmPassword))
-                return new ApiResponse<RegisterResponse>(false, null, "Favor preencher a confirmação da senha do usuario.");
+                return new ApiResponse<RegisterResponse>(false, "PASSWORD_NOT_FOUND",null, "Favor preencher a confirmação da senha do usuario.");
 
             if (request.Password.Trim() != request.ConfirmPassword.Trim())
-                return new ApiResponse<RegisterResponse>(false, null, "Senhas não coincidem.");
+                return new ApiResponse<RegisterResponse>(false, "PASSWORD_NOT_MATCH", null, "Senhas não coincidem.");
 
             var email = request.Email.Trim().ToLowerInvariant();
             var exists = await _userRepository.GetByEmailAsync(email);
             if (exists is not null)
-                return new ApiResponse<RegisterResponse>(false, null, "Email já cadastrado.");
+                return new ApiResponse<RegisterResponse>(false, "EMAIL_EXISTS", null, "Email já cadastrado.");
 
             var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
@@ -46,7 +46,7 @@ namespace Petrix.Application.UseCases.Auth
             await _userRepository.SaveChangesAsync();
 
             var response = new RegisterResponse(user.Id, user.Name, user.Email);
-            return new ApiResponse<RegisterResponse>(true, response, "Registro realizado com sucesso.");
+            return new ApiResponse<RegisterResponse>(true, "", response, "Registro realizado com sucesso.");
 
         }
     }
