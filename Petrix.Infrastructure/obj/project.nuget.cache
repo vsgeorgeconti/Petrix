@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g3R/hRqTr2A=",
+  "dgSpecHash": "47aYpZa0Zcg=",
   "success": true,
-  "projectFilePath": "C:\\Estudos\\Petrix\\Petrix\\Petrix.Infrastructure\\Petrix.Infrastructure.csproj",
+  "projectFilePath": "c:\\Estudos\\Petrix\\Petrix\\Petrix.Infrastructure\\Petrix.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,7 +1,7 @@
 using Petrix.Infrastructure.DependencyInjection;
 using Petrix.Application.DependencyInjection;
 using Petrix.Api.Middlewares;
-using Microsoft.OpenApi;
+using Petrix.Api.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,29 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi(options =>
 {
-    options.AddDocumentTransformer((document, context, ct) =>
-    {
-        if (document.Components is null)
-        {
-            document.Components = new OpenApiComponents();
-        }
-
-        if (document.Components.SecuritySchemes is null)
-        {
-            document.Components.SecuritySchemes = new Dictionary<string, IOpenApiSecurityScheme>();
-        }
-
-        document.Components.SecuritySchemes["Bearer"] = new OpenApiSecurityScheme
-        {
-            Type = SecuritySchemeType.Http,
-            Scheme = "bearer",
-            In = ParameterLocation.Header,
-            BearerFormat = "JWT",
-            Description = "Informe apenas o token JWT."
-        };
-
-        return Task.CompletedTask;
-    });
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
 });
 
 builder.Services.AddPersistence(builder.Configuration);
@@ -39,7 +17,16 @@ builder.Services.AddApplication();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddJwtAuthentication(builder.Configuration);
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -55,6 +42,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
+app.UseCors("PermitirFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

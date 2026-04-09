@@ -1,9 +1,12 @@
-<form>
-  <h2 class="text-6xl text-zinc-900">Dashboard</h2>
+
+<div *ngIf="userData">
+  <h2>Bem-vindo, {{ userData.name }}</h2>
+  <p>Email: {{ userData.email }}</p>
   <button
     class="w-md h-10 border border-blue-600 bg-blue-600 text-blue-100 rounded-2xl cursor-pointer hover:opacity-95"
     type="submit" (click)="logout()"
   >
     Sair
   </button>
-</form>
+</div>
+

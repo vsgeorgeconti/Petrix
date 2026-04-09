@@ -30,7 +30,7 @@ export class LoginComponent {
     const returnUrlParam = this.route.snapshot.queryParamMap.get('returnUrl');
 
     this.returnUrl =
-      returnUrlParam && returnUrlParam.startsWith('/') ? returnUrlParam : '/dashboard';
+      returnUrlParam && returnUrlParam.startsWith('/') ? returnUrlParam : '/';
   }
 
   onSubmit(): void {

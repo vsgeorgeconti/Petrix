@@ -1,3 +1,5 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Petrix.Application.DTOs.Auth;
@@ -23,7 +25,14 @@ namespace Petrix.Api.Controllers
         [HttpGet("me")]
         public IActionResult Me()
         {
-            return Ok("Autenticado com sucesso");
+            var user = new
+            {
+                Id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+                Email = User.FindFirst(ClaimTypes.Email)?.Value,
+                Name = User.FindFirst("name")?.Value
+            };
+
+            return Ok(user);
         }
 
         [HttpPost("register")]

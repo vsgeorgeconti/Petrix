@@ -7,12 +7,22 @@ export const routes: Routes = [
     loadComponent: () => import('./features/auth/pages/login/login').then((m) => m.LoginComponent),
   },
   {
-    path: 'dashboard',
+    path: '',
     canActivate: [authGuard],
-    loadComponent: () => import('./features/dashboard/pages/dashboard/dashboard').then((m) => m.DashboardComponent),
+    loadComponent: () =>
+      import('./layouts/authenticated-layout/authenticated-layout').then(
+        (m) => m.AuthenticatedLayoutComponent,
+      ),
+    children: [
+      {
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./features/dashboard/pages/dashboard/dashboard').then(
+            (m) => m.DashboardComponent,
+          ),
+      },
+    ],
   },
-  { path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-   },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
