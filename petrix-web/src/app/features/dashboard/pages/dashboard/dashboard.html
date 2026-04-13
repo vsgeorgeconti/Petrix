@@ -1,5 +1,15 @@
-
-<div *ngIf="userData">
-  <h2>Bem-vindo, {{ userData.name }}</h2>
+<div *ngIf="isLoading" class="h-full flex items-center justify-center">
+  <span class="loader"></span>
+  <span class="m-2 font-black text-base text-zinc-600 animate-pulse">Carregando...</span>
 </div>
+
+<div *ngIf="!isLoading && hasError" class="h-full flex items-center justify-center">
+  <span class="m-2 font-black text-base text-zinc-600">Erro inesperado.</span>
+</div>
+
+<div *ngIf="!isLoading && !hasError && userData" class="flex place-content-center">
+  <h2 class="text-3xl font-medium text-zinc-600">Bem-vindo, {{ userData.name }}</h2>
+</div>
+
+
 
