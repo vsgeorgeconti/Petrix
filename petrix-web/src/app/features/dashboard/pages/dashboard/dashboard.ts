@@ -13,17 +13,12 @@ import { CommonModule } from '@angular/common';
 })
 export class DashboardComponent {
   userData: MeResponse | null = null;
-  constructor(private authService: AuthService, private router: Router, ){}
+  constructor(private authService: AuthService){}
 
   ngOnInit() : void {
     this.authService.getCurrentUser().subscribe({ next: (Me) => {
       this.userData = Me;
       console.log(this.userData);
     }})
-  }
-
-  logout() : void {
-    this.authService.logout()
-    this.router.navigateByUrl('/login');
   }
 }
