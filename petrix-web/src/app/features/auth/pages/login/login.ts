@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
   standalone: true,
@@ -13,6 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LoginComponent {
   loginForm: FormGroup;
   private returnUrl = '';
+  errorMessage: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,8 +31,7 @@ export class LoginComponent {
   ngOnInit(): void {
     const returnUrlParam = this.route.snapshot.queryParamMap.get('returnUrl');
 
-    this.returnUrl =
-      returnUrlParam && returnUrlParam.startsWith('/') ? returnUrlParam : '/';
+    this.returnUrl = returnUrlParam && returnUrlParam.startsWith('/') ? returnUrlParam : '/';
   }
 
   onSubmit(): void {
@@ -44,9 +45,12 @@ export class LoginComponent {
         })
         .subscribe({
           next: () => {
+            this.errorMessage = null;
             this.router.navigateByUrl(this.returnUrl);
           },
-          error: (err) => console.error('Erro: ', err),
+          error: (err) => {
+            this.errorMessage = err.error?.message ?? 'Credenciais inválidas.';
+          },
         });
     }
   }

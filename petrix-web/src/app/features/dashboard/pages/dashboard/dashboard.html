@@ -3,8 +3,8 @@
   <span class="m-2 font-black text-base text-zinc-600 animate-pulse">Carregando...</span>
 </div>
 
-<div *ngIf="!isLoading && hasError" class="h-full flex items-center justify-center">
-  <span class="m-2 font-black text-base text-zinc-600">Erro inesperado.</span>
+<div *ngIf="!isLoading && hasError" class="w-full h-10 mt-2 p-2 py-2 flex flex-col items-center justify-center bg-red-50 text-red-600 border border-red-200 font-medium rounded-2xl">
+  {{errorMessage}}
 </div>
 
 <div *ngIf="!isLoading && !hasError && userData" class="flex place-content-center">

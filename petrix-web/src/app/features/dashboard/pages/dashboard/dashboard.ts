@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class DashboardComponent {
   userData: MeResponse | null = null;
+  errorMessage: string | null = null;
   isLoading = true;
   hasError = false;
 
@@ -22,11 +23,14 @@ export class DashboardComponent {
       next: (me) => {
         this.userData = me;
         this.isLoading = false;
+        this.hasError = false;
       },
-      error: () => {
+      error: (err) => {
         this.isLoading = false;
         this.hasError = true;
+        this.errorMessage = err.error?.message ?? 'Erro ao carregar os dados. Tente novamente.';
       },
     });
   }
+  
 }
