@@ -1,15 +1,24 @@
-<div *ngIf="isLoading" class="h-full flex items-center justify-center">
+<div *ngIf="isLoading" class="flex items-center justify-center h-full">
   <span class="loader"></span>
   <span class="m-2 font-black text-base text-zinc-600 animate-pulse">Carregando...</span>
 </div>
+<div *ngIf="!isLoading" class="flex flex-col gap-3">
+  <!-- Cabeçalho da página -->
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-semibold text-zinc-800">Dashboard</h1>
+  </div>
+  <div class="flex-1">
+    <div
+      *ngIf="hasError"
+      class="w-full h-10 mt-2 p-2 py-2 flex flex-col items-center justify-center bg-red-50 text-red-600 border border-red-200 font-medium rounded-2xl"
+    >
+      {{ errorMessage }}
+    </div>
 
-<div *ngIf="!isLoading && hasError" class="w-full h-10 mt-2 p-2 py-2 flex flex-col items-center justify-center bg-red-50 text-red-600 border border-red-200 font-medium rounded-2xl">
-  {{errorMessage}}
+    <div *ngIf="!hasError && userData" class="flex place-content-center">
+      <h2 class="text-3xl font-medium text-zinc-600">Bem-vindo, {{ userData.name }}</h2>
+    </div>
+  </div>
 </div>
-
-<div *ngIf="!isLoading && !hasError && userData" class="flex place-content-center">
-  <h2 class="text-3xl font-medium text-zinc-600">Bem-vindo, {{ userData.name }}</h2>
-</div>
-
 
 
