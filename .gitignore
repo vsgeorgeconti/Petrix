@@ -1,2 +1,47 @@
-*.claude
+## Claude Code
+.claude
+
+## .NET build artifacts
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.swp
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+## Rider / JetBrains
+.idea/
+
+## Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+
+## Node / npm
 node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+## Angular
+/petrix-web/dist
+/petrix-web/tmp
+/petrix-web/.angular/cache
+/petrix-web/coverage
+
+## Docker
+*.env
+.env.local
+.env.*.local
+
+## OS
+.DS_Store
+Thumbs.db
