@@ -2,26 +2,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Petrix.Domain.Exceptions;
+using Petrix.Domain.Utils;
 
 namespace Petrix.Domain.Entities
 {
     public class Customer : BaseEntity
     {
         public string Name { get; set; } = null!;
+        public string DocumentNumber { get; set; } = null!;
         public string? Email { get; set; }
-        public string? Phone { get; set; }
-        public string? DocumentNumber { get; set; }
+        public string? Phone { get; set; }       
 
-
-        public static Customer Create(string name, string? email, string? phone, string? documentNumber)
+        public static Customer Create(string name, string documentNumber, string? email, string? phone)
         {
+            
+            if (!CpfValidator.IsValid(documentNumber))
+                throw new ValidationException("CPF inválido.");
+
             return new Customer
             {
                 Id = Guid.NewGuid(),
                 Name = name,
+                DocumentNumber = documentNumber,
                 Email = email,
                 Phone = phone,
-                DocumentNumber = documentNumber,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow,
                 IsActive = true   
