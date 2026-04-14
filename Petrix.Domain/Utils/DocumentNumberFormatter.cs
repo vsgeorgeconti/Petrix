@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Petrix.Application.Common
+namespace Petrix.Domain.Utils
 {
-    public class DocumentNumberFormatter
+    public static class DocumentNumberFormatter
     {
         public static string FormatCpf(string cpf)
         {
