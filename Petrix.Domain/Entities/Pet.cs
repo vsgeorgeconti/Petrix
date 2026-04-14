@@ -11,7 +11,7 @@ namespace Petrix.Domain.Entities
         public decimal? Weight { get; set; }
         public string? Notes { get; set; }
 
-        public static Pet Create(string name, Species species, string? breed, DateTime? bithdate, decimal? weight, string? notes)
+        public static Pet Create(string name, Species species, string? breed, DateTime? birthdate, decimal? weight, string? notes)
         {
             return new Pet
             {
@@ -19,7 +19,7 @@ namespace Petrix.Domain.Entities
               Name = name,
               Species = species,
               Breed = breed,
-              BirthDate = bithdate,
+              BirthDate = birthdate,
               Weight = weight,
               Notes = notes,
               CreatedAt = DateTime.UtcNow,
