@@ -11,6 +11,7 @@ namespace Petrix.Infrastructure.Persistence
         }
         public DbSet<User> Users => Set<User>();
         public DbSet<Customer> Customers => Set<Customer>();
+        public DbSet<Pet> Pets => Set<Pet>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
