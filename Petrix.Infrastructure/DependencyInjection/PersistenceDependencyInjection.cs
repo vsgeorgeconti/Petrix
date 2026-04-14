@@ -27,6 +27,7 @@ namespace Petrix.Infrastructure.DependencyInjection
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IPetRepository, PetRepository>();
             return services;
         }
 
