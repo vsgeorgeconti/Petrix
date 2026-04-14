@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Petrix.Domain.Exceptions;
 using Petrix.Domain.Utils;
 
@@ -19,12 +15,12 @@ namespace Petrix.Domain.Entities
             
             if (!CpfValidator.IsValid(documentNumber))
                 throw new ValidationException("CPF inválido.");
-
+                
             return new Customer
             {
                 Id = Guid.NewGuid(),
                 Name = name,
-                DocumentNumber = documentNumber,
+                DocumentNumber = DocumentNumberFormatter.FormatCpf(documentNumber),
                 Email = email,
                 Phone = phone,
                 CreatedAt = DateTime.UtcNow,
