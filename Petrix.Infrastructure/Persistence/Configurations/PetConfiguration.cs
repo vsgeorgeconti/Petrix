@@ -9,16 +9,20 @@ namespace Petrix.Infrastructure.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Pet> builder)
         {
             builder.Property(x => x.Name)
-                  .IsRequired()
-                  .HasMaxLength(100);
+                .IsRequired()
+                .HasMaxLength(100);
             builder.Property(x => x.Breed)
                 .HasMaxLength(100);
             builder.Property(x => x.Notes)
                 .HasMaxLength(500);
             builder.Property(x => x.Weight)
-                .HasPrecision(5,2);
+                .HasPrecision(5, 2);
             builder.Property(x => x.Species)
                 .HasConversion<string>();
+            builder.HasOne(x => x.Customer)
+                .WithMany(x => x.Pets)
+                .HasForeignKey(x => x.CustomerId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
