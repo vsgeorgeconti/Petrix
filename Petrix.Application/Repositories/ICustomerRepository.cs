@@ -5,6 +5,7 @@ namespace Petrix.Application.Repositories
     public interface ICustomerRepository
     {
         Task<Customer?> GetByIdAsync(Guid id);
+        Task<Customer?> GetByDocumentNumberAsync(string documentNumber);
         Task<IEnumerable<Customer>> GetAllAsync();
         Task AddAsync(Customer customer);
         void Update(Customer customer);
