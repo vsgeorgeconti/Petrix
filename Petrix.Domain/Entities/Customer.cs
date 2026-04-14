@@ -8,7 +8,8 @@ namespace Petrix.Domain.Entities
         public string Name { get; set; } = null!;
         public string DocumentNumber { get; set; } = null!;
         public string? Email { get; set; }
-        public string? Phone { get; set; }       
+        public string? Phone { get; set; }    
+        public ICollection<Pet> Pets { get; set; } = [];   
 
         public static Customer Create(string name, string documentNumber, string? email, string? phone)
         {
