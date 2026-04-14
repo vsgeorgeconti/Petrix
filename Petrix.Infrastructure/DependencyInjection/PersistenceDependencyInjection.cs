@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Petrix.Application.Common;
 using Petrix.Application.Interfaces;
+using Petrix.Application.Repositories;
 using Petrix.Infrastructure.Persistence;
 using Petrix.Infrastructure.Persistence.Repositories;
 using Petrix.Infrastructure.Services;
@@ -25,6 +26,7 @@ namespace Petrix.Infrastructure.DependencyInjection
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             return services;
         }
 
