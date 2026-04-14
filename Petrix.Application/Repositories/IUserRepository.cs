@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Petrix.Domain.Entities;
-
-namespace Petrix.Application.Interfaces
+namespace Petrix.Application.Repositories
 {
     public interface IUserRepository
     {

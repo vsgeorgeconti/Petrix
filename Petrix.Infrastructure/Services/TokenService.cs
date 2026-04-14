@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Petrix.Application.Common;
-using Petrix.Application.Interfaces;
+using Petrix.Application.Services;
 using Petrix.Domain.Entities;
 
 

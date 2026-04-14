@@ -1,6 +1,6 @@
 using Petrix.Domain.Entities;
 
-namespace Petrix.Application.Interfaces
+namespace Petrix.Application.Services
 {
     public interface ITokenService
     {

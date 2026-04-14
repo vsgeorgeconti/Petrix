@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Petrix.Application.Interfaces;
+using Petrix.Application.Repositories;
 using Petrix.Domain.Entities;
 
 namespace Petrix.Infrastructure.Persistence.Repositories

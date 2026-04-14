@@ -1,6 +1,7 @@
 using Petrix.Application.Common;
 using Petrix.Application.DTOs.Auth;
-using Petrix.Application.Interfaces;
+using Petrix.Application.Repositories;
+using Petrix.Application.Services;
 
 namespace Petrix.Application.UseCases.Auth
 {
