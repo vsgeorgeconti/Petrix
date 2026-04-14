@@ -2,7 +2,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Petrix.Application.UseCases.Auth;
 using Microsoft.Extensions.Configuration;
 using Petrix.Application.Common;
-using Petrix.Application.Interfaces;
 
 namespace Petrix.Application.DependencyInjection
 {

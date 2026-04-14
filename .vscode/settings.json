@@ -1,3 +1,6 @@
 {
-  "dotnet.defaultSolution": "Petrix.slnx"
+  "dotnet.defaultSolution": "Petrix.slnx",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  }
 }
