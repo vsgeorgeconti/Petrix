@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using Petrix.Application.Common;
 using Petrix.Application.DTOs.Customer;
 using Petrix.Application.Repositories;
@@ -17,11 +12,11 @@ namespace Petrix.Application.UseCases.Customer
             this._customerRepository = customerRepository;
         }
 
-        public async Task<ApiResponse<IEnumerable<CustomerResponse>>> GetAllCustomerUseCase()
+        public async Task<ApiResponse<IEnumerable<CustomerResponse>>> GetAllAsync()
         {
             var customers = await _customerRepository.GetAllAsync();
             if (customers is null)
-                return new ApiResponse<IEnumerable<CustomerResponse>>(false, null, null, "Nenhum cliente encontrado.");
+                return new ApiResponse<IEnumerable<CustomerResponse>>(false, "NOT_FOUND", null, "Nenhum cliente encontrado.");
 
 
             var responses = customers.Select(c => new CustomerResponse
