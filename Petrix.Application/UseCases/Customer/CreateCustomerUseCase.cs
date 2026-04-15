@@ -23,7 +23,7 @@ namespace Petrix.Application.UseCases.Customer
             if (string.IsNullOrWhiteSpace(createCustomerRequest.Name))
                 return new ApiResponse<CustomerResponse>(false, "NOT_FOUND", null, "Favor digitar o nome do cliente.");
 
-            var exists = _customerRepository.GetByDocumentNumberAsync(createCustomerRequest.DocumentNumber);
+            var exists = await _customerRepository.GetByDocumentNumberAsync(createCustomerRequest.DocumentNumber);
 
             if (exists is not null)
                 return new ApiResponse<CustomerResponse>(false, "DOCUMENT_EXISTS", null, "Documento já cadastrado, favor verificar.");
@@ -42,7 +42,7 @@ namespace Petrix.Application.UseCases.Customer
                 IsActive = customer.IsActive 
             };
 
-            return new ApiResponse<CustomerResponse>(true, "SUCESS", response, "Cliente cadastrado com sucesso.");
+            return new ApiResponse<CustomerResponse>(true, "SUCCESS", response, "Cliente cadastrado com sucesso.");
         }
     }
 }
