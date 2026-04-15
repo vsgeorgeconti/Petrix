@@ -21,7 +21,7 @@ namespace Petrix.Application.UseCases.Customer
             _customerRepository.Delete(customer);
             await _customerRepository.SaveChangesAsync();
 
-            return new ApiResponse<CustomerResponse>(true, "SUCESS", null, "Cliente deletado.");
+            return new ApiResponse<CustomerResponse>(true, "SUCCESS", null, "Cliente deletado.");
         }
 
     }

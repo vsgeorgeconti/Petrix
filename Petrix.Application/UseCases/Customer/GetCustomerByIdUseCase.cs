@@ -32,7 +32,7 @@ namespace Petrix.Application.UseCases.Customer
                 IsActive = customer.IsActive
             };
 
-            return new ApiResponse<CustomerResponse>(true, "SUCESS", response, "Cliente encontrado com sucesso.");
+            return new ApiResponse<CustomerResponse>(true, "SUCCESS", response, "Cliente encontrado com sucesso.");
 
         }
 

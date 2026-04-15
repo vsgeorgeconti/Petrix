@@ -29,7 +29,7 @@ namespace Petrix.Application.UseCases.Customer
                 IsActive = c.IsActive
             });
 
-            return new ApiResponse<IEnumerable<CustomerResponse>>(true,"SUCESS", responses, "Clientes encontrados.");
+            return new ApiResponse<IEnumerable<CustomerResponse>>(true,"SUCCESS", responses, "Clientes encontrados.");
         }
 
     }
