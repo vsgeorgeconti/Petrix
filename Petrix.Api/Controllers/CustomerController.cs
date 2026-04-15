@@ -31,13 +31,13 @@ namespace Petrix.Api.Controllers
             var result = await _createCustomerUseCase.CreateCustomer(request);
 
             if (result.Success == true)
-                return Created();
+                return Ok(result);
             if (result.Code == "NOT_FOUND")
-                return NotFound();
+                return NotFound(result);
             if (result.Code == "DOCUMENT_EXISTS")
-                return Conflict();
+                return Conflict(result);
 
-            return BadRequest();
+            return BadRequest(result);
         }
 
 
@@ -47,13 +47,11 @@ namespace Petrix.Api.Controllers
             var result = await _updateCustomerUseCase.Update(id, request);
 
             if (result.Success == true)
-                return Ok();
-            if (result.Code == "NO_CONTENT")
-                return NoContent();
+                return Ok(result);
             if (result.Code == "NOT_FOUND")
-                return NotFound();
+                return NotFound(result);
 
-            return BadRequest();
+            return BadRequest(result);
         }
 
         [HttpDelete("{id}")]
@@ -62,11 +60,11 @@ namespace Petrix.Api.Controllers
             var result = await _deleteCustomerUseCase.Delete(id);
 
             if (result.Success == true)
-                return Ok();
+                return Ok(result);
             if (result.Code == "NOT_FOUND")
-                return NotFound();
+                return NotFound(result);
 
-            return BadRequest();
+            return BadRequest(result);
         }
 
         [HttpGet("{id}")]
@@ -74,11 +72,11 @@ namespace Petrix.Api.Controllers
         {
             var result = await _getCustomerByIdUseCase.GetCustomerById(id);
             if (result.Success == true)
-                return Ok();
+                return Ok(result);
             if (result.Code == "NOT_FOUND")
-                return NotFound();
+                return NotFound(result);
 
-            return BadRequest();
+            return BadRequest(result);
         }
 
         [HttpGet]
@@ -86,14 +84,10 @@ namespace Petrix.Api.Controllers
         {
             var result = await _getAllCustomersUseCase.GetAllAsync();
             if (result.Success == true)
-                return Ok();
+                return Ok(result);
             if (result.Code == "NOT_FOUND")
-                return NotFound();
-            return BadRequest();
+                return NotFound(result);
+            return BadRequest(result);
         }
-
-
-
-
     }
 }
