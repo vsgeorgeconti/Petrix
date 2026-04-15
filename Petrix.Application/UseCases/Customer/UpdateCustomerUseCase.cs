@@ -24,6 +24,7 @@ namespace Petrix.Application.UseCases.Customer
             customer.Name = updateCustomerRequest.Name;
             customer.Email = updateCustomerRequest.Email ?? customer.Email;
             customer.Phone = updateCustomerRequest.Phone ?? customer.Phone;
+            customer.UpdatedAt = DateTime.UtcNow;
             
             _customerRepository.Update(customer);
             await _customerRepository.SaveChangesAsync();
@@ -38,7 +39,7 @@ namespace Petrix.Application.UseCases.Customer
               IsActive = customer.IsActive
             };
           
-            return  new ApiResponse<CustomerResponse>(true, "SUCESS", response, "Cliente atualizado com sucesso.");
+            return  new ApiResponse<CustomerResponse>(true, "SUCCESS", response, "Cliente atualizado com sucesso.");
         }
     }
 }
