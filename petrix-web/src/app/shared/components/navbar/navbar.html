@@ -1,4 +1,4 @@
-<nav class="w-56 h-screen bg-white border-r border-gray-200 flex flex-col flex-1 px-4 py-6 gap-2">
+<nav class="w-56 h-screen bg-zinc-100 border-r border-gray-200 flex flex-col flex-1 px-4 py-6 gap-2">
   <span class="font-semibold text-zinc-800 mb-4 px-2">Petrix</span>
 
   <a
@@ -8,7 +8,13 @@
   >
     Dashboard
   </a>
-
+  <a
+    routerLink="/customers"
+    routerLinkActive="bg-blue-50 text-blue-600"
+    class="text-sm text-zinc-600 hover:bg-zinc-100 rounded-lg px-3 py-2 transition-colors"
+  >
+    Clientes
+  </a>
   @if (user; as u) {
     <div class="mt-auto border-t border-zinc-200 pt-4 relative">
       @if (menuOpen()) {
