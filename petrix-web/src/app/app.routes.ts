@@ -26,6 +26,27 @@ export const routes: Routes = [
             (m) => m.DashboardComponent,
           ),
       },
+      {
+        path: 'customers',
+        loadComponent: () =>
+          import('./features/customer/pages/customer-list/customer-list').then(
+            (m) => m.CustomerListComponent,
+          ),
+      },
+      {
+        path: 'customer/new',
+        loadComponent: () =>
+          import('./features/customer/pages/customer-form/customer-form').then(
+            (m) => m.CustomerFormComponent,
+          ),
+      },
+      {
+        path: 'customer/:id',
+        loadComponent: () =>
+          import('./features/customer/pages/customer-form/customer-form').then(
+            (m) => m.CustomerFormComponent,
+          ),
+      },
     ],
   },
 
