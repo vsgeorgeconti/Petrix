@@ -10,6 +10,6 @@ namespace Petrix.Application.Repositories
         void Update(Pet pet);
         void Delete(Pet pet);
         Task SaveChangesAsync();
-        Task<IEnumerable<Pet>> GetByCustomerIdAsync(Guid customerId);
+        Task<IEnumerable<Pet>> GetPetsByCustomerIdAsync(Guid customerId);
     }
 }

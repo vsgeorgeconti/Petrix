@@ -18,7 +18,7 @@ namespace Petrix.Infrastructure.Persistence.Repositories
 
         public async Task<IEnumerable<Pet>> GetAllAsync() => await _context.Pets.AsNoTracking().ToListAsync();
 
-        public async Task<IEnumerable<Pet>> GetByCustomerIdAsync(Guid customerId) => await _context.Pets.AsNoTracking().Where(x => x.CustomerId == customerId).ToListAsync();
+        public async Task<IEnumerable<Pet>> GetPetsByCustomerIdAsync(Guid customerId) => await _context.Pets.AsNoTracking().Where(x => x.CustomerId == customerId).ToListAsync();
 
         public async Task<Pet?> GetByIdAsync(Guid id) => await _context.Pets.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
 
