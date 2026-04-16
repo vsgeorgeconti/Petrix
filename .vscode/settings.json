@@ -2,5 +2,6 @@
   "dotnet.defaultSolution": "Petrix.slnx",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
-  }
+  },
+  "FSharp.suggestGitignore": false
 }
