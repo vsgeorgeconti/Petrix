@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../../auth/services/auth.service';
 import { MeResponse } from '../../../auth/models/me-response.model';
 import { CommonModule } from '@angular/common';
+import { Spinner } from "../../../../shared/components/spinner/spinner";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Spinner],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
