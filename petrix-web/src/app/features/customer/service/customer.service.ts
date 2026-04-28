@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiResponse } from '../../../core/models/api-response.model';
-import { Customer } from '../models/customer-model';
+import { CreateCustomerRequest, Customer, UpdateCustomerRequest } from '../models/customer-model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,20 +12,21 @@ export class CustomerService {
 
   constructor(private http: HttpClient) {}
 
+  
   getAllCustomers(): Observable<ApiResponse<Customer[]>>{
     return this.http.get<ApiResponse<Customer[]>>(this.apiUrl);
   }
 
-  getCustomerById(id: string): Observable<Customer>{
-    return this.http.get<Customer>(`${this.apiUrl}/${id}`);
+  getCustomerById(id: string): Observable<ApiResponse<Customer>>{
+    return this.http.get<ApiResponse<Customer>>(`${this.apiUrl}/${id}`);
   }
 
-  createCustomer(customer: Customer): Observable<Customer>{
-    return this.http.post<Customer>(this.apiUrl, customer);
+  createCustomer(customer: CreateCustomerRequest): Observable<ApiResponse<Customer>>{
+    return this.http.post<ApiResponse<Customer>>(this.apiUrl, customer);
   }
 
-  updateCustomer(id: string, customer: Customer): Observable<Customer>{
-    return this.http.put<Customer>(`${this.apiUrl}/${id}`, customer);
+  updateCustomer(id: string, customer : UpdateCustomerRequest): Observable<ApiResponse<Customer>>{
+    return this.http.put<ApiResponse<Customer>>(`${this.apiUrl}/${id}`, customer);
   }
 
   deleteCustomer(id: string): Observable<void>{
