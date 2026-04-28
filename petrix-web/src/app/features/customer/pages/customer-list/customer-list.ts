@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Spinner } from '../../../../shared/components/spinner/spinner';
@@ -26,7 +27,7 @@ export class CustomerListComponent implements OnInit {
 
   state$!: Observable<PageState>;
 
-  constructor(private customerService: CustomerService) {}
+  constructor(private customerService: CustomerService, private router: Router) {}
 
    ngOnInit(): void {
     const allCustomers$ = this.refresh$.pipe(
@@ -62,11 +63,14 @@ export class CustomerListComponent implements OnInit {
     this.searchTerm$.next(value);
   }
 
-
+  createCustomer() : void{
+    this.router.navigate(['/customer/new']);
+  }
 
   editCustomer(id: string): void {
     // Implementar lógica de edição, como navegar para uma página de edição ou abrir um modal
     console.log('Edit customer with ID:', id);
+    this.router.navigate([`/customer/${id}`]);
   }
 
   onDeleteCustomer(id: string): void {
