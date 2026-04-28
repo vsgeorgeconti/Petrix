@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
-import { LoginRequest } from '../models/login-request.model';
 import { HttpClient } from '@angular/common/http';
-import { ApiResponse } from '../../../core/models/api-response.model';
-import { LoginResponse } from '../models/login-response.model';
+import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { ApiResponse } from '../../../core/models/api-response.model';
+import { LoginRequest } from '../models/login-request.model';
+import { LoginResponse } from '../models/login-response.model';
 import { MeResponse } from '../models/me-response.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private urlApi = 'https://localhost:7122/api/v1/auth';
+  private urlApi = 'http://localhost:5000/api/v1/auth';
 
   constructor(private http: HttpClient) {}
 
