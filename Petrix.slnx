@@ -3,4 +3,7 @@
 	<Project Path="src/backend/Petrix.Application/Petrix.Application.csproj" />
 	<Project Path="src/backend/Petrix.Domain/Petrix.Domain.csproj" />
 	<Project Path="src/backend/Petrix.Infrastructure/Petrix.Infrastructure.csproj" />
+	<Project Path="src/Mobile/Petrix.App/Petrix.App.csproj" Id="7cc202e8-6e2d-4ac3-8d43-bd4e1aee333e">
+		<Deploy Solution="Debug|*" />
+	</Project>
 </Solution>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Petrix.App.Views.Pages.OnBoarding.OnBoardingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout>
+        <Image Source="hero_image.png" />
+        <Label
+            Padding="20"
+            FontFamily="RalewayBlack"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Bem vindo ao Petrix!"
+            TextColor="DarkMagenta" />
+        <Button
+            Padding="10"
+            BackgroundColor="DarkMagenta"
+            CharacterSpacing="1"
+            CornerRadius="10"
+            FontFamily="RalewayBlack"
+            FontSize="18"
+            HorizontalOptions="Center"
+            MinimumWidthRequest="350"
+            Text="Login"
+            TextColor="WhiteSmoke" />
+        <HorizontalStackLayout Padding="20" HorizontalOptions="Center">
+            <Label FontSize="18">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontFamily="WorkSansRegular" Text="Não tem uma conta? " />
+                        <Span
+                            FontFamily="WorkSansBlack"
+                            Text="Crie sua conta!"
+                            TextColor="DarkMagenta" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
