@@ -21,6 +21,7 @@
 ```
 Frontend  → Angular (TypeScript + SCSS)
 Backend   → ASP.NET Core (C#)
+App  →  .Net MAUI
 Database  → PostgreSQL
 Deploy    → Docker + Docker Compose
 ```
@@ -42,6 +43,7 @@ Petrix.Infrastructure   → Repositories, database, EF Core
 |---|---|
 | Backend | ASP.NET Core (.NET 10), Entity Framework Core, JWT |
 | Frontend | Angular, TypeScript, SCSS |
+| Mobile | .Net MAUI |
 | Database | PostgreSQL |
 | DevOps | Docker, Docker Compose |
 
@@ -98,11 +100,13 @@ POST /api/v1/auth
 
 ```
 Petrix/
-├── Petrix.Api/             # ASP.NET Core API
-├── Petrix.Application/     # Use cases and interfaces
-├── Petrix.Domain/          # Domain entities
-├── Petrix.Infrastructure/  # EF Core, repositories
-├── petrix-web/             # Angular frontend
+├── src/            
+├────── Petrix.Api/             # ASP.NET Core API
+├────── Petrix.Application/     # Use cases and interfaces
+├────── Petrix.Domain/          # Domain entities
+├────── Petrix.Infrastructure/  # EF Core, repositories
+├────── petrix-web/             # Angular frontend
+├────── Petrix.App/             # .net MAUI Mobile App
 ├── dockerfile
 └── docker-compose.yaml
 ```
